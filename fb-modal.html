@@ -1,0 +1,43 @@
+<div class="modal" id="modal"></div>
+<script class="modal" type="text/x-jquery-tmpl"> 
+<div class="modalContainer">
+	<h1>${title}</h1>
+	<div class="modalContent">
+		{{html body}}
+	</div>
+	<div class="modalFooter">
+	{{if (footer instanceof Array)}}
+		{{each footer}}
+			<a href="${href}"
+			{{each $value}}
+				 ${$index}="${$value}"
+			{{/each}}
+			>${content}</a>
+		{{/each}}
+	{{else}}
+		{{html footer}}
+	{{/if}}
+	</div>
+</div>
+</script>
+
+<!-- EXAMPLE --
+
+jv.UTIL.tmpl("modal", {
+	title: "awesome", 
+	
+	body: "<p>You win!</p>", 
+	-- OR --
+	body: $('#someModalContentDiv').html(),
+	-- OR --
+	body: $('#someTemplate').tmpl(data).html(),
+	
+	footer: '<a href="#">Home</a><a href="#">Back to Job</a>'
+	-- OR --
+	footer: [
+		{ href: "http://somepath.com", content: "Visit SomePath", otherAttribute: "whatever" },
+		{ href: "home.htm", content: "Go Back?", class: "whatever" }
+	]
+}).fadeIn();
+window.location = "#modal";
+ -->
