@@ -1,5 +1,8 @@
 @import "compass/css3";
 
+* {margin: 0; padding: 0;}
+a { text-decoration: none;}
+
 /* Modal */
 .modal {
 	display: none;
@@ -9,7 +12,7 @@
 	top: 0;
 	left: 0;
 	padding-top: 150px;
-	background: rgba(255,255,255,.80);
+	background: rgba(0,0,0,.40);
 	text-align: center;
 	.modalContainer {
 		@include border-radius(8px);
@@ -70,8 +73,15 @@
 				margin: 20px 0;
 			}
 			.hr {
-				span {
-					margin-top: -13px;
+				border-top: 1px solid #e9e9e9;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				text-align: center;
+				span, a {
+					background: white;
+					padding: 0 10px;
+					margin-top: -10px;
+					display: inline-block;
 				}
 			}
 		}

@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Facebook Modal</title>
+	<link rel="stylesheet" href="css/fb-modal.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('body>a').click(function(){
+				$('.modal').fadeIn();
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+<a href="#">Click Me</a>
+<div class="modal" id="modal">
+	<div class="modalContainer">
+		<h1>FACEbook MODALS Yo!</h1>
+		<div class="modalContent">
+			<h2>Dude trhis thing works!</h2>
+			<p>Awesome man</p>
+			<hr>
+			<p>I love facebook</p>
+			<p class="hr"><span>Woa</span></p>
+			<h3>That part is just for show</h3>
+			<p>:)</p>
+		</div>
+		<div class="modalFooter">
+			<a href="#">Cancel</a>
+			<a href="#">Save</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
